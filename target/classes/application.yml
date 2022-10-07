@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/instagram
+    username: postgres
+    password: 123
+
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+
+
+
+
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: MonitoringInstagramDemoProject
+
+
+
